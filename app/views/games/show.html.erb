@@ -1,12 +1,132 @@
-<h1> Show page </h1>
+    <style>
 
-<!DOCTYPE html>
-   <head>
+        .container {
+            display: flex;
+            width: 600px;
+            height: 320px;
+            align-items: end;
+            justify-content: center;
+            border-bottom: 20px solid black;
+            border-radius: 20px;
+        }
 
-     <link rel="stylesheet" type="text/css" href="towerofhonoi.css">
+        #title {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 55px;
+            font-family: 'Times New Roman', Times, serif;
+            font-style: oblique;
+        }
 
-   </head>
-   <body>
+        title:visited {
+            color: rgb(201, 87, 87);
+            background-color: aqua;
+        }
+
+        #title p {
+            margin: 0px;
+        }
+
+        #moves {
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 600;
+            font-family: sans-serif;
+            color: brown;
+        }
+
+        #currentMoves {
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 600;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: navy;
+        }
+
+        .tower {
+            height: 220px;
+            width: 16px;
+            background-color: rgb(78, 5, 5);
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: end;
+            align-items: center;
+            z-index: 1;
+        }
+
+        .tower:hover {
+            color: blue;
+            background-color: green;
+        }
+
+        tower::after {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        #tower2 {
+            margin-left: 180px;
+        }
+
+        #tower3 {
+            margin-left: 180px;
+        }
+
+        .start-button {
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .btn {
+            size: 90px;
+        }
+
+        .disk {
+            border-radius: 20px;
+            z-index: 2;
+        }
+
+        #disk1 {
+            height: 25px;
+            width: 140px;
+            background-color: rgb(199, 6, 6);
+        }
+
+        #disk2 {
+            height: 25px;
+            width: 120px;
+            background-color: indigo;
+        }
+
+        #disk3 {
+            height: 25px;
+            width: 100px;
+            background-color: rgb(7, 7, 190);
+        }
+
+        #disk4 {
+            height: 25px;
+            width: 80px;
+            background-color: rgb(2, 131, 2);
+        }
+
+        #disk5 {
+            height: 25px;
+            width: 60px;
+            background-color: rgb(190, 205, 50);
+        }
+
+        #disk6 {
+            height: 25px;
+            width: 40px;
+            background-color: orange;
+        }
+
+    </style>
+
     <div id="title">
         <p class="title"> <a href="https://www.google.com/">Tower Of Honoi</a></p>
         <p id="moves">Minimun Moves: </p>
@@ -217,5 +337,3 @@
             }
         });
     </script>
-   </body>
-</html>
