@@ -1,7 +1,9 @@
-<h1 class="text-center mt-4"><%=@user.username%>'s profile</h1>
+<h1 class="text-center mt-5 font-italic font-weight-bold"><%=@user.username%>'s profile</h1>
+<h5 class="text-center mt-3 font-italic">Choose Game To Play</h5>
 
 <div class="text-center mt-4">
-    <%= link_to 'Tower Of Honoi', game_path, class:"btn btn-success btn-lg text-center" %>
-    
+    <%= link_to 'Tower Of Honoi', towerofhonoi_path, class:"btn btn-primary btn-lg m-2" %>
+    <%= link_to 'Tic Tac Toe', tictactoe_path, class:"btn btn-primary btn-lg m-2" %>
+    <%= link_to 'Rock Paper Scissors', rockpaperscissor_path, class:"btn btn-primary btn-lg m-2" %>
 </div>
 
