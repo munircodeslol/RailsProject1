@@ -10,11 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_06_07_145244) do
+ActiveRecord::Schema.define(version: 2023_06_21_130512) do
+
+  create_table "game_users", force: :cascade do |t|
+    t.integer "game_id"
+    t.integer "user_id"
+  end
 
   create_table "games", force: :cascade do |t|
     t.string "name"
-    t.integer "user_id"
   end
 
   create_table "tictactoes", force: :cascade do |t|
