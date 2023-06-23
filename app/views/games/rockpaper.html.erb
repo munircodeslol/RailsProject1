@@ -88,7 +88,7 @@
                       if (confirm('You Win! Play Again?')) {
                         location.reload();
                       } else {
-                        window.location.href = '<%= user_path(1) %>';
+                        window.location.href = '<%= user_path(current_user.id) %>';
                       }
                     }, 200);              
                   break
@@ -100,7 +100,7 @@
                       if (confirm('You Lose! Play Again?')) {
                         location.reload();
                       } else {
-                        window.location.href = '<%= user_path(1) %>';
+                        window.location.href = '<%= user_path(current_user.id) %>';
                       }
                     }, 200);
                   break
@@ -112,7 +112,7 @@
                       if (confirm('It\'s a Draw! Play Again?')) {
                         location.reload();
                       } else {
-                        window.location.href = '<%= user_path(1) %>';
+                        window.location.href = '<%= user_path(current_user.id) %>';
                       }
                     }, 200);
                   break

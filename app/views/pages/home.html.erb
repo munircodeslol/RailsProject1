@@ -1,1 +1,19 @@
-Home
+<h1 class= ' text-center mt-5 pt-5'> Online Games Home Page </h1>
+<hr class="hr-shortened">
+
+<div class="text-center mt-4">
+    <%if current_user%>
+        <h6>To access online games and enjoy their features, please go to your profile and
+        <br> Choose a game you want to play! </h6>
+
+        <%= link_to 'Take Me To Games', user_path(current_user.id), class:"btn btn-primary btn-lg m-2" %>
+    <%end%>
+
+    <%if !current_user%>
+        <h6 class= ' text-center '> To access online games and enjoy their features, 
+        please consider logging in or signing up for an account.<br>
+        Join us today and embark on exciting gaming adventures! </h6>
+        <%= link_to 'Log-in now!', login_path, class: "btn btn-primary btn-lg m-2" %>
+        <%= link_to 'Sign-up now!', signup_path, class: "btn btn-primary btn-lg m-2" %>
+    <%end%>
+</div>

@@ -129,7 +129,7 @@ const checkWin = ()=>{
                 if (confirm(turn+' Lose! Play Again?')) {
                   location.reload();
                 } else {
-                  window.location.href = '<%= user_path(1) %>';
+                  window.location.href = '<%= user_path(current_user.id) %>';
                 }
               }, 400);     
         }
